@@ -1,0 +1,135 @@
+{
+	"info": {
+		"name": "doggy style",
+		"_postman_id": "9f782cde-c774-48f5-b5c4-649c6927328e",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "allBreeds",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "https://dog.ceo/api/breeds/list/all",
+					"protocol": "https",
+					"host": [
+						"dog",
+						"ceo"
+					],
+					"path": [
+						"api",
+						"breeds",
+						"list",
+						"all"
+					]
+				},
+				"description": "blah blah blah"
+			},
+			"response": []
+		},
+		{
+			"name": "imagebybreed",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "https://dog.ceo/api/breed/retriever/golden/images/random",
+					"protocol": "https",
+					"host": [
+						"dog",
+						"ceo"
+					],
+					"path": [
+						"api",
+						"breed",
+						"retriever",
+						"golden",
+						"images",
+						"random"
+					]
+				},
+				"description": "blah blah blah"
+			},
+			"response": []
+		},
+		{
+			"name": "retriever",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "4032b08b-16a9-46fd-b6b6-1f57456b1a15",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Verify - retiever is within list\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"retriever\");",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "https://dog.ceo/api/breeds/list/all",
+					"protocol": "https",
+					"host": [
+						"dog",
+						"ceo"
+					],
+					"path": [
+						"api",
+						"breeds",
+						"list",
+						"all"
+					]
+				},
+				"description": "blah blah blah"
+			},
+			"response": []
+		},
+		{
+			"name": "subBreeds",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "300daaf0-bb51-4eff-9d6e-500f46dd2f87",
+						"type": "text/javascript",
+						"exec": [
+							"",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "https://dog.ceo/api/breed/retriever/list",
+					"protocol": "https",
+					"host": [
+						"dog",
+						"ceo"
+					],
+					"path": [
+						"api",
+						"breed",
+						"retriever",
+						"list"
+					]
+				},
+				"description": "blah blah blah"
+			},
+			"response": []
+		}
+	]
+}
